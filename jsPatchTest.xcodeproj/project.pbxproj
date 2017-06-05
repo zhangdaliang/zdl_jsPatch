@@ -15,6 +15,9 @@
 		7ED53E6D1E6E7120005FDD46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED53E6B1E6E7120005FDD46 /* LaunchScreen.storyboard */; };
 		7ED53E781E6E7120005FDD46 /* jsPatchTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED53E771E6E7120005FDD46 /* jsPatchTestTests.m */; };
 		7ED53E831E6E7120005FDD46 /* jsPatchTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED53E821E6E7120005FDD46 /* jsPatchTestUITests.m */; };
+		7ED53E911E6E714E005FDD46 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED53E901E6E714E005FDD46 /* JSPatchPlatform.framework */; };
+		7ED53E941E6E727C005FDD46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED53E931E6E727C005FDD46 /* libz.tbd */; };
+		7ED53E961E6E7301005FDD46 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 7ED53E951E6E7301005FDD46 /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		7ED53E7E1E6E7120005FDD46 /* jsPatchTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsPatchTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED53E821E6E7120005FDD46 /* jsPatchTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jsPatchTestUITests.m; sourceTree = "<group>"; };
 		7ED53E841E6E7120005FDD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ED53E901E6E714E005FDD46 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
+		7ED53E931E6E727C005FDD46 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7ED53E951E6E7301005FDD46 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		7ED53E971E6E7504005FDD46 /* jsPatchTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jsPatchTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED53E941E6E727C005FDD46 /* libz.tbd in Frameworks */,
+				7ED53E911E6E714E005FDD46 /* JSPatchPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +90,12 @@
 		7ED53E511E6E7120005FDD46 = {
 			isa = PBXGroup;
 			children = (
+				7ED53E901E6E714E005FDD46 /* JSPatchPlatform.framework */,
 				7ED53E5C1E6E7120005FDD46 /* jsPatchTest */,
 				7ED53E761E6E7120005FDD46 /* jsPatchTestTests */,
 				7ED53E811E6E7120005FDD46 /* jsPatchTestUITests */,
 				7ED53E5B1E6E7120005FDD46 /* Products */,
+				7ED53E921E6E727C005FDD46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +112,7 @@
 		7ED53E5C1E6E7120005FDD46 /* jsPatchTest */ = {
 			isa = PBXGroup;
 			children = (
+				7ED53E971E6E7504005FDD46 /* jsPatchTest.entitlements */,
 				7ED53E601E6E7120005FDD46 /* AppDelegate.h */,
 				7ED53E611E6E7120005FDD46 /* AppDelegate.m */,
 				7ED53E631E6E7120005FDD46 /* ViewController.h */,
@@ -110,6 +122,7 @@
 				7ED53E6B1E6E7120005FDD46 /* LaunchScreen.storyboard */,
 				7ED53E6E1E6E7120005FDD46 /* Info.plist */,
 				7ED53E5D1E6E7120005FDD46 /* Supporting Files */,
+				7ED53E951E6E7301005FDD46 /* main.js */,
 			);
 			path = jsPatchTest;
 			sourceTree = "<group>";
@@ -138,6 +151,14 @@
 				7ED53E841E6E7120005FDD46 /* Info.plist */,
 			);
 			path = jsPatchTestUITests;
+			sourceTree = "<group>";
+		};
+		7ED53E921E6E727C005FDD46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ED53E931E6E727C005FDD46 /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +228,13 @@
 				TargetAttributes = {
 					7ED53E591E6E7120005FDD46 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = R644W2BV5X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					7ED53E721E6E7120005FDD46 = {
 						CreatedOnToolsVersion = 8.1;
@@ -246,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED53E961E6E7301005FDD46 /* main.js in Resources */,
 				7ED53E6D1E6E7120005FDD46 /* LaunchScreen.storyboard in Resources */,
 				7ED53E6A1E6E7120005FDD46 /* Assets.xcassets in Resources */,
 				7ED53E681E6E7120005FDD46 /* Main.storyboard in Resources */,
@@ -422,6 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = jsPatchTest/jsPatchTest.entitlements;
+				DEVELOPMENT_TEAM = R644W2BV5X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = jsPatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yshow.-ceshiSpriteKit.jsPatchTest";
@@ -433,6 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = jsPatchTest/jsPatchTest.entitlements;
+				DEVELOPMENT_TEAM = R644W2BV5X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = jsPatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yshow.-ceshiSpriteKit.jsPatchTest";
